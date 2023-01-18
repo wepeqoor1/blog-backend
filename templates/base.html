@@ -7,10 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  {% if request.path == '/'%}
+  {% if request.path == '/' %}
     <title>Sensive Blog - Home</title>
-    {% endif %}
-  {% if request.path == '/contact/'%}
+  {% endif %}
+  {% if request.path == '/contact/' %}
     <title>Sensive Blog - Contact</title>
   {% endif %}
   {% if '/post/' in request.path %}
@@ -38,7 +38,7 @@
         <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
           <ul class="nav navbar-nav menu_nav justify-content-center">
             <li class="nav-item"><a class="nav-link" href="{% url 'index' %}" style="color: #3a414e">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}" style="color: #3a414e" >Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}" style="color: #3a414e">Contact</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right navbar-social">
             <li><a href="#"><i class="ti-facebook"></i></a></li>
@@ -51,7 +51,7 @@
     </nav>
   </div>
 </header>
-  {% block content %}
-  {% endblock %}
+{% block content %}
+{% endblock %}
 </body>
 <!--================Header Menu Area =================-->
