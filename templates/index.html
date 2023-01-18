@@ -3,7 +3,7 @@
 
 {% block base %}{% endblock %}
 
-<body>
+
 {% block content %}
   <main class="site-main">
     <!--================Hero Banner start =================-->
@@ -62,7 +62,7 @@
                   <ul style="max-width: 550px;" class="thumb-info">
                     <li><a href="#"><i class="ti-user"></i>{{ fresh_post.author }}</a></li>
                     <li><a href="#"><i class="ti-notepad"></i>{{ fresh_post.published_at }}</a></li>
-                    <li><a href="#"><i class="ti-themify-favicon"></i>{{ fresh_post.comments_amount }}</a></li>
+                    <li><a href="#"><i class="ti-themify-favicon"></i>{{ fresh_post.comments_amount }} Comments </a></li>
                   </ul>
                 </div>
                 <div class="details mt-20">
@@ -208,4 +208,3 @@
 
   <script src="{% static 'scripts.js' %}"></script>
 {% endblock %}
-</body>
