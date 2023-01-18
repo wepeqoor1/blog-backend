@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block base %}{% endblock %}
+
 <body>
 {% block content %}
   <main class="site-main">
@@ -66,33 +68,34 @@
                 <div class="details mt-20">
                   <h3>{{ fresh_post.title }}</h3>
                   <p>{{ fresh_post.text|truncatechars:200 }}</p>
-                  <a class="button" href={% url 'post_detail' slug=fresh_post.slug %}> Read more <i class="ti-arrow-right"></i></a>
+                  <a class="button" href={% url 'post_detail' slug=fresh_post.slug %}> Read more <i
+                    class="ti-arrow-right"></i></a>
                 </div>
               </div>
             {% endfor %}
 
             <div class="row">
               <div class="col-lg-12">
-                  <nav class="blog-pagination justify-content-center d-flex">
-                      <ul class="pagination">
-                          <li class="page-item">
-                              <a href="#" class="page-link" aria-label="Previous">
+                <nav class="blog-pagination justify-content-center d-flex">
+                  <ul class="pagination">
+                    <li class="page-item">
+                      <a href="#" class="page-link" aria-label="Previous">
                                   <span aria-hidden="true">
                                       <i class="ti-angle-left"></i>
                                   </span>
-                              </a>
-                          </li>
-                          <li class="page-item active"><a href="#" class="page-link">1</a></li>
-                          <li class="page-item"><a href="#" class="page-link">2</a></li>
-                          <li class="page-item">
-                              <a href="#" class="page-link" aria-label="Next">
+                      </a>
+                    </li>
+                    <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                    <li class="page-item"><a href="#" class="page-link">2</a></li>
+                    <li class="page-item">
+                      <a href="#" class="page-link" aria-label="Next">
                                   <span aria-hidden="true">
                                       <i class="ti-angle-right"></i>
                                   </span>
-                              </a>
-                          </li>
-                      </ul>
-                  </nav>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
               </div>
             </div>
           </div>
@@ -104,8 +107,9 @@
                 <h4 class="single-sidebar-widget__title">Newsletter</h4>
                 <div class="form-group mt-30">
                   <div class="col-autos">
-                    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Enter email" onfocus="this.placeholder = ''"
-                      onblur="this.placeholder = 'Enter email'">
+                    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Enter email"
+                           onfocus="this.placeholder = ''"
+                           onblur="this.placeholder = 'Enter email'">
                   </div>
                 </div>
                 <button class="bbtns d-block mt-20 w-100">Subcribe</button>
@@ -132,7 +136,8 @@
           <div class="single-footer-widget">
             <h6>About Us</h6>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+              dolore
               magna aliqua.
             </p>
           </div>
@@ -143,13 +148,15 @@
             <p>Stay update with our latest</p>
             <div class="" id="mc_embed_signup">
 
-              <form target="_blank" novalidate action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-                method="get" class="form-inline">
+              <form target="_blank" novalidate
+                    action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                    method="get" class="form-inline">
 
                 <div class="d-flex flex-row">
 
-                  <input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '"
-                    required="" type="email">
+                  <input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''"
+                         onblur="this.placeholder = 'Enter Email '"
+                         required="" type="email">
 
 
                   <button class="click-btn btn btn-default"><span class="lnr lnr-arrow-right"></span></button>
@@ -189,7 +196,9 @@
       <div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap">
         <p class="footer-text m-0">
           <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-          Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+          Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+          All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a
+          href="https://colorlib.com" target="_blank">Colorlib</a>
           <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
         </p>
       </div>
