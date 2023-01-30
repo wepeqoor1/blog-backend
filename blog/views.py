@@ -42,14 +42,14 @@ def post_detail(request, slug):
     """
     post = get_object_or_404(Post, slug=slug)
     comments = Comment.objects.filter(post=post)
-    serialized_comments = []
-    for comment in comments:
-        serialized_comments.append({
+    serialized_comments = [
+        {
             'text': comment.text,
             'published_at': comment.published_at,
             'author': comment.author.username,
-        })
-
+        }
+        for comment in comments
+    ]
     serialized_post = {
         "title": post.title,
         "text": post.text,
